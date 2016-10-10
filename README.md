@@ -14,7 +14,7 @@ Get CPU usage percentage of own process
 ## Install
 
 ```sh
-npm install -S cpu-usage
+npm install -S cpu-percentage
 ```
 
 ## Usage

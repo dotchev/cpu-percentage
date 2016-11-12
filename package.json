@@ -1,6 +1,6 @@
 {
   "name": "cpu-percentage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get CPU usage percentage of own process",
   "main": "index.js",
   "scripts": {

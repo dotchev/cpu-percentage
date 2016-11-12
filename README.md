@@ -11,6 +11,8 @@ Get CPU usage percentage of own process
 
 **Note:** requires node 6.1 or later.
 
+See also [cpu-gauge](https://github.com/dotchev/cpu-gauge).
+
 ## Install
 
 ```sh

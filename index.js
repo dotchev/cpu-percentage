@@ -3,7 +3,9 @@
 module.exports = getUsage;
 
 function getUsage(oldUsage) {
-  var usage;
+  var usage,
+      usageTime;
+
   if (oldUsage && oldUsage._start) {
     usage = Object.assign({}, process.cpuUsage(oldUsage._start.cpuUsage));
     usage.time = Date.now() - oldUsage._start.time;
@@ -11,7 +13,13 @@ function getUsage(oldUsage) {
     usage = Object.assign({}, process.cpuUsage());
     usage.time = process.uptime() * 1000; // s to ms
   }
-  usage.percent = (usage.system + usage.user) / (usage.time * 10);
+
+  usageTime = usage.time * 10;
+
+  usage.total = (usage.system + usage.user) / usageTime;
+  usage.userPercentage = usage.user / usageTime;
+  usage.systemPercentage = usage.system / usageTime;
+
   Object.defineProperty(usage, '_start', {
     value: {
       cpuUsage: process.cpuUsage(),

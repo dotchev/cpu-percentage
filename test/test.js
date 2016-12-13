@@ -24,7 +24,9 @@ describe('cpuPercentage', () => {
 			system: 10000,
 			user: 20000,
 			time: 1000,
-			percent: 3
+			total: 3,
+			userPercentage: 2,
+			systemPercentage: 1
 		});
 	});
 
@@ -40,7 +42,9 @@ describe('cpuPercentage', () => {
 			system: 12000,
 			user: 28000,
 			time: 50,
-			percent: 80
+            total: 80,
+            userPercentage: 56,
+            systemPercentage: 24
 		});
 	});
 

@@ -1,5 +1,5 @@
 {
-  "name": "cpu-percentage",
+  "name": "@dynamicaction/cpu-percentage",
   "version": "2.0.0",
   "description": "Get CPU usage percentage of own process",
   "main": "index.js",

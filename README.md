@@ -16,7 +16,7 @@ See also [cpu-gauge](https://github.com/dotchev/cpu-gauge).
 ## Install
 
 ```sh
-npm install -S cpu-percentage
+npm install cpu-percentage
 ```
 
 ## Usage
@@ -24,17 +24,17 @@ npm install -S cpu-percentage
 In this example we measure the CPU usage while loading a text file.
 
 ```js
-var usage = require('cpu-percentage');
-var fs = require('fs');
+const usage = require('cpu-percentage');
+const fs = require('fs');
 
-var start = usage();
-fs.readFile(__filename, 'utf8', function(err, data) {
+const start = usage();
+fs.readFile(__filename, 'utf8', (err, data) => {
   console.log(usage(start));
 });
 ```
 
 The result is similar to
 
-```
+```js
 { user: 8000, system: 4000, time: 9, percent: 133.33333333333334 }
 ```
